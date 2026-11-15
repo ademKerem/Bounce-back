@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://jgcyv2re6s"]
+
+[node name="Killzone" type="Area2D" unique_id=632201924]
+
+[node name="Timer" type="Timer" parent="." unique_id=1653570059]
+wait_time = 0.6
+one_shot = true

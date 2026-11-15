@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://br6rwyevaeqrk" path="res://backround/room/classroom_door.png" id="5_sq1j3"]
 [ext_resource type="Texture2D" uid="uid://crqqc1sjhu4wq" path="res://backround/classroom items/main_desk.png" id="6_tcvfs"]
 [ext_resource type="Texture2D" uid="uid://bjuytvxcbdf7t" path="res://backround/classroom items/pin_bored.png" id="7_og7ah"]
+[ext_resource type="PackedScene" uid="uid://cn1vk2bpqjajd" path="res://player.tscn" id="8_tcvfs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e7xny"]
 texture = ExtResource("1_wxanr")
@@ -137,3 +138,6 @@ tile_set = SubResource("TileSet_wtbnl")
 
 [node name="TileMapLayer7" type="TileMapLayer" parent="Node2D" unique_id=766122693]
 tile_set = SubResource("TileSet_2qlj6")
+
+[node name="Player" parent="." unique_id=1151764892 instance=ExtResource("8_tcvfs")]
+position = Vector2(-212, 156)

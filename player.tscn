@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cn1vk2bpqjajd"]
+
+[ext_resource type="Script" uid="uid://bg6pfdlo5un47" path="res://player.gd" id="1_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://qx8ofkuf1pnl" path="res://assets/Characters/tile_0002.png" id="2_hqtel"]
+[ext_resource type="Texture2D" uid="uid://do2ejjygdm3wk" path="res://assets/Characters/tile_0003.png" id="3_sweqy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l3n1l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hqtel")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hqtel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sweqy")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=1151764892]
+collision_layer = 2
+script = ExtResource("1_i3pqv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=473700894]
+position = Vector2(19, 5)
+sprite_frames = SubResource("SpriteFrames_l3n1l")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1064696266]
+position_smoothing_enabled = true
